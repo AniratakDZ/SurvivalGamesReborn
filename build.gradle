@@ -53,3 +53,14 @@ processResources {
         expand props
     }
 }
+
+tasks.register('deployPlugin', Copy) {
+    dependsOn tasks.jar
+
+    from(tasks.jar.archiveFile)
+    into("C:\\Users\\stett\\Desktop\\Development\\Java\\Minecraft\\Test Server\\1.21.11\\plugins")
+}
+
+tasks.build {
+    finalizedBy(tasks.named('deployPlugin'))
+}
