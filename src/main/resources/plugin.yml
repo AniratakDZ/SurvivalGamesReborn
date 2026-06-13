@@ -1,0 +1,4 @@
+name: SurvivalGamesReborn
+version: '0.1'
+main: de.regitstudios.survivalGamesReborn.SurvivalGamesReborn
+api-version: '1.21'
